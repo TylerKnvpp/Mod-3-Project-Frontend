@@ -1,5 +1,4 @@
  body {
-  background-image: url("assets/images/background.svg");
 
   background: rgb(2, 0, 36);
   background: linear-gradient(
@@ -13,9 +12,11 @@
 }
 
 .scene {
+  background-image: url("http://plug.nyc/wp-content/uploads/2019/09/bg.png");
   width: 1440px;
   height: 800px;
   perspective: 400px;
+  position: relative;
 }
 
 /* 
