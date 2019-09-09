@@ -1,0 +1,125 @@
+body {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    180deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(22, 22, 51, 1) 65%,
+    rgba(38, 38, 38, 1) 100%
+  );
+  overflow: hidden;
+  position: fixed;
+}
+
+.scene {
+  width: 1440px;
+  height: 800px;
+
+  perspective: 400px;
+}
+
+.cube {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: translateZ(-100px);
+}
+
+.cube.is-spinning {
+  animation: spinCube 8s infinite ease-in-out;
+}
+
+@keyframes spinCube {
+  0% {
+    transform: translateZ(-100px) rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: translateZ(-100px) rotateX(360deg) rotateY(360deg);
+  }
+}
+
+.cube__face {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border: 2px solid black;
+  line-height: 200px;
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+.cube__face--right {
+  /* background: hsla(60, 100%, 50%, 0.7); */
+}
+.cube__face--back {
+  border: solid 1px #ef1cf2;
+  margin-left: 220px;
+  margin-right: 220px;
+  margin-top: 177px;
+  height: 278px;
+  width: 1000px;
+}
+.cube__face--left {
+  border: solid 1px #ef1cf2;
+}
+.cube__face--top {
+  border: solid 1px #ef1cf2;
+}
+.cube__face--bottom {
+  border: solid 1px #ef1cf2;
+}
+
+.cube__face--front {
+  transform: rotateY(0deg) translateZ(100px);
+}
+.cube__face--right {
+  transform: rotateY(90deg) translateZ(100px);
+  border: solid 1px #ef1cf2;
+  margin-left: 1020px;
+  margin-bottom: 100px;
+  height: 500px;
+  width: 1000px;
+}
+.cube__face--back {
+  transform: rotateY(180deg) translateZ(100px);
+  position: absolute;
+}
+.cube__face--left {
+  transform: rotateY(-90deg) translateZ(675px);
+  border: solid 1px #ef1cf2;
+  margin-right: 1200px;
+  margin-bottom: 100px;
+  height: 500px;
+  width: 1000px;
+}
+.cube__face--top {
+  transform: rotateX(90deg) translateZ(275px);
+  margin-left: 120px;
+  /* margin-right: 260px; */
+  margin-top: 210px;
+  height: 400px;
+  width: 1200px;
+}
+.cube__face--bottom {
+  transform: rotateX(-90deg) translateZ(-165px);
+
+  margin-left: -123px;
+  /* margin-right: 260px; */
+  margin-top: 210px;
+  height: 900px;
+  width: 1700px;
+}
+
+.cube.is-backface-hidden .cube__face {
+  backface-visibility: hidden;
+}
+
+.target {
+  height: 50px;
+  width: auto;
+  position: relative;
+  background-position-x: 0px;
+  background-position-y: 0px;
+}
