@@ -1,4 +1,6 @@
-body {
+ body {
+  background-image: url("assets/images/background.svg");
+
   background: rgb(2, 0, 36);
   background: linear-gradient(
     180deg,
@@ -13,10 +15,10 @@ body {
 .scene {
   width: 1440px;
   height: 800px;
-
   perspective: 400px;
 }
 
+/* 
 .cube {
   width: 200px;
   height: 200px;
@@ -50,9 +52,7 @@ body {
   text-align: center;
 }
 
-.cube__face--right {
-  /* background: hsla(60, 100%, 50%, 0.7); */
-}
+
 .cube__face--back {
   border: solid 1px #ef1cf2;
   margin-left: 220px;
@@ -84,7 +84,7 @@ body {
 }
 .cube__face--back {
   transform: rotateY(180deg) translateZ(100px);
-  position: absolute;
+  position: ab;
 }
 .cube__face--left {
   transform: rotateY(-90deg) translateZ(675px);
@@ -97,7 +97,6 @@ body {
 .cube__face--top {
   transform: rotateX(90deg) translateZ(275px);
   margin-left: 120px;
-  /* margin-right: 260px; */
   margin-top: 210px;
   height: 400px;
   width: 1200px;
@@ -106,7 +105,6 @@ body {
   transform: rotateX(-90deg) translateZ(-165px);
 
   margin-left: -123px;
-  /* margin-right: 260px; */
   margin-top: 210px;
   height: 900px;
   width: 1700px;
@@ -120,6 +118,7 @@ body {
   height: 50px;
   width: auto;
   position: relative;
-  background-position-x: 0px;
-  background-position-y: 0px;
-}
+} 
+
+
+
